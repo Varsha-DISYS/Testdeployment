@@ -17,6 +17,7 @@ jobs:
         run: dotnet restore SampleWebApp/SampleWebApp.csproj
       - name: Build
         run: dotnet build --no-restore
+        working-directory: SampleWebApp
       - name: Test
         run: dotnet test --no-build
       - name: Publish
